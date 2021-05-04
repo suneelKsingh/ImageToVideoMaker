@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/player"
+        android:layout_marginBottom="5dp"
+        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            >
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imageBottomSheetMultiPick"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/pick_image_icon"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="20dp"
+                />
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/singleVideoBottomSheetPick"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:text="Video Pick bottom sheet (single selection)"
+                android:src="@drawable/pick_video_icon"
+
+                />
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/singleAudioBottomSheetPick"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/pick_audio_icon"
+                android:scaleType="fitXY"
+                 />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/playVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Play"
+                android:padding="5dp"
+                 android:background="@drawable/shape_play_button"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/makeVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Ready"
+            android:padding="5dp"
+            android:background="@drawable/shape_play_button"
+            android:gravity="center"
+            android:layout_gravity="center"
+              android:layout_marginLeft="10dp"
+            />
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/launchFragmentResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_checked"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/singleImageBottomSheetPick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Image Pick bottom sheet (single selection)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image"
+            android:visibility="gone"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/video"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/videoBottomSheetMultiPick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Video Pick bottom sheet (multi selection)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/divider2"
+            android:background="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@+id/videoBottomSheetMultiPick"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/audio"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/audio"
+            android:id="@+id/audioTitle"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <com.google.android.material.button.MaterialButton
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/audioBottomSheetMultiPick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Audio Pick bottom sheet (multi selection)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
